@@ -1,0 +1,12 @@
+[13-08-2024 15:35:31.635 | INFO | com.facebook.home.Level_20_Element_Undisplayed] - Verify Confirm Email txt is displayed
+[13-08-2024 15:35:31.855 | INFO | com.facebook.home.Level_20_Element_Undisplayed] - OS name = windows 10
+[13-08-2024 15:35:31.855 | INFO | com.facebook.home.Level_20_Element_Undisplayed] - Driver instance name = chromedriver: chrome on windows (ec67cf462e1d63e89eac1a20285a916e)
+[13-08-2024 15:35:31.856 | INFO | com.facebook.home.Level_20_Element_Undisplayed] - Command line: taskkill /F /FI 'IMAGENAME eq chromedriver*'
+[13-08-2024 15:35:39.046 | INFO | com.facebook.home.Level_20_Element_Undisplayed] - Verify Confirm Email txt is displayed
+[13-08-2024 15:35:39.078 | INFO | com.facebook.home.Level_20_Element_Undisplayed] - OS name = windows 10
+[13-08-2024 15:35:39.079 | INFO | com.facebook.home.Level_20_Element_Undisplayed] - Driver instance name = firefoxdriver: firefox on windows (4e2e34ce-e6f8-4902-980e-ee9fa3fb463b)
+[13-08-2024 15:35:39.079 | INFO | com.facebook.home.Level_20_Element_Undisplayed] - Command line: taskkill /F /FI 'IMAGENAME eq geckodriver*'
+[13-08-2024 15:35:46.082 | INFO | com.facebook.home.Level_20_Element_Undisplayed] - Verify Confirm Email txt is displayed
+[13-08-2024 15:35:46.134 | INFO | com.facebook.home.Level_20_Element_Undisplayed] - OS name = windows 10
+[13-08-2024 15:35:46.135 | INFO | com.facebook.home.Level_20_Element_Undisplayed] - Driver instance name = edgedriver: microsoftedge on windows (fdd010100767c1ec2ee13f1602fecb50)
+[13-08-2024 15:35:46.135 | INFO | com.facebook.home.Level_20_Element_Undisplayed] - Command line: taskkill /F /FI 'IMAGENAME eq msedgedriver*'

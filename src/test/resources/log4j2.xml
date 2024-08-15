@@ -10,11 +10,11 @@
             <PatternLayout pattern="${pattern}"/>
         </Console>
 
-        <File name="FixedFile" fileName="logs/Fixed.log" append="true">
+        <File name="FixedFile" fileName="log4jLogs/Fixed.log" append="true">
             <PatternLayout pattern="${pattern}"/>
         </File>
 
-        <File name="RandomFile" fileName="logs/Random.${random}.log" immediateFlush="false" append="true">
+        <File name="RandomFile" fileName="log4jLogs/Random.${random}.log" immediateFlush="false" append="true">
             <PatternLayout pattern="${pattern}"/>
         </File>
 

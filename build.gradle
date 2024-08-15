@@ -48,13 +48,13 @@ dependencies {
     implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.23.1'
 
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
-    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.36'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.16'
 
     // https://mvnrepository.com/artifact/velocity/velocity-dep
     implementation group: 'velocity', name: 'velocity-dep', version: '1.4'
 
     // https://mvnrepository.com/artifact/com.google.inject/guice
-    implementation group: 'com.google.inject', name: 'guice', version: '4.1.0'
+    implementation group: 'com.google.inject', name: 'guice', version: '5.1.0'
 
     // https://mvnrepository.com/artifact/commons-logging/commons-logging
     implementation group: 'commons-logging', name: 'commons-logging', version: '1.2'
@@ -83,7 +83,21 @@ test {
         showStandardStreams = true
     }
 
-    systemProperty "file.encoding","utf-8"
-    reports.html.setDestination(file("$projectDir/reportGradle"))
-    //reports.html.destination(file("$projectDir/reportGradle"))
+    /*systemProperty "file.encoding", "utf-8"
+    reports.html.setDestination(file("$projectDir/reportGradle"))*/
+}
+
+// custom lenh task
+task webapp(type: Test) {
+    useTestNG() {
+        useDefaultListeners = true
+        suites 'src/test/resources/RunFacebook.xml'
+    }
+}
+
+task apilevel(type: Test) {
+    useTestNG() {
+        useDefaultListeners = true
+        suites 'src/test/resources/RunFacebookWithExtension.xml'
+    }
 }

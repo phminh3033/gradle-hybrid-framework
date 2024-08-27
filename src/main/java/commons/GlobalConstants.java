@@ -30,6 +30,7 @@ public class GlobalConstants {
     public static final String BROWSER_EXTENSIONS = RELATIVE_PROJECT_PATH + File.separator + "browserExtensions" + File.separator;
     public static final String BROWSER_LOGS = RELATIVE_PROJECT_PATH + File.separator + "browserLogs" + File.separator;
     public static final String REPORT_IMG_PATH = RELATIVE_PROJECT_PATH + File.separator + "reportNGScreenshot" + File.separator;
+    public static final String ENVIRONMENT_CONFIG_PATH = RELATIVE_PROJECT_PATH + File.separator + "envConfig" + File.separator;
 
     public static final String ORANGE_HRM_ADMIN_USERNAME = "autofczyy";
     public static final String ORANGE_HRM_ADMIN_PASSWORD = "M3gf46@#4$df";

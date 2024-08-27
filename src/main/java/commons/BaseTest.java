@@ -224,6 +224,32 @@ public class BaseTest {
         return driver;
     }
 
+    protected WebDriver getBrowserEnv(String browserName, String serverName) {
+        BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
+        switch (browser) {
+            case FIREFOX:
+                driver = new FirefoxDriver();
+                break;
+            case CHROME:
+                driver = new ChromeDriver();
+                break;
+            case EDGE:
+                driver = new EdgeDriver();
+                break;
+            default:
+                throw new RuntimeException("Browser name is not valid");
+        }
+
+        //driver.manage().window().maximize();
+        driver.manage().window().setPosition(new Point(0, 0));
+        driver.manage().window().setSize(new Dimension(1920, 1080));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
+        System.out.println(getUrlBySeverName(serverName));
+        driver.get(getUrlBySeverName(serverName));
+
+        return driver;
+    }
+
     protected WebDriver getBrowserDriverCapabilities(String browserName, String url) {
         BrowserList browser = BrowserList.valueOf(browserName.toUpperCase());
 
@@ -540,6 +566,24 @@ public class BaseTest {
     protected String getRandomEmail() {
         Random random = new Random();
         return "auto" + random.nextInt(999) + "@gmail.net";
+    }
+
+    private String getUrlBySeverName(String serverName) {
+        ServerList server = ServerList.valueOf(serverName.toUpperCase());
+        switch (server) {
+            case DEV:
+                serverName = "http://demo.nopcommerce.local";
+                break;
+            case TEST:
+                serverName = "http://test.nopcommerce.local";
+                break;
+            case STAGING:
+                serverName = "http://staging.nopcommerce.local";
+                break;
+            default:
+                throw new IllegalArgumentException("Server name is not valid: " + serverName);
+        }
+        return serverName;
     }
 
     protected boolean verifyTrue(boolean condition) {

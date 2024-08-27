@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="NopCommerce Web">
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+    </listeners>
+    
+    <parameter name="url" value="http://demo.nopcommerce.local"></parameter>
+    
+    <test name="Run on Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.nopcommerce.account.Level_31_Multiple_Env_02"/>
+        </classes>
+    </test>
+</suite>
